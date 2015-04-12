@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
   <remote  name="aosp"
-           fetch=".." />
-  <default revision="refs/tags/android-5.1.0_r3"
+           fetch="https://android.googlesource.com/" />
+  <default revision="refs/tags/android-5.0.2_r1"
            remote="aosp"
            sync-j="4" />
 
@@ -29,7 +30,7 @@
   <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu" clone-depth="1" />
   <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
   <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
--->
+-->  
   <project path="device/common" name="device/common" groups="pdk-cw-fs" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
@@ -56,11 +57,9 @@
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" clone-depth="1" />
   <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu" />
   <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu" clone-depth="1" />
--->
-  <project path="device/sample" name="device/sample" groups="pdk" />
-<!--
   <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
 -->
+  <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs" />
@@ -86,7 +85,6 @@
   <project path="external/chromium_org/testing/gtest" name="platform/external/chromium_org/testing/gtest" />
   <project path="external/chromium_org/third_party/WebKit" name="platform/external/chromium_org/third_party/WebKit" />
   <project path="external/chromium_org/third_party/angle" name="platform/external/chromium_org/third_party/angle" />
-  <project path="external/chromium_org/third_party/boringssl/src" name="platform/external/chromium_org/third_party/boringssl/src" />
   <project path="external/chromium_org/third_party/brotli/src" name="platform/external/chromium_org/third_party/brotli/src" />
   <project path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" name="platform/external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" />
   <project path="external/chromium_org/third_party/freetype" name="platform/external/chromium_org/third_party/freetype" />
@@ -102,6 +100,7 @@
   <project path="external/chromium_org/third_party/libyuv" name="platform/external/chromium_org/third_party/libyuv" />
   <project path="external/chromium_org/third_party/mesa/src" name="platform/external/chromium_org/third_party/mesa/src" />
   <project path="external/chromium_org/third_party/openmax_dl" name="platform/external/chromium_org/third_party/openmax_dl" />
+  <project path="external/chromium_org/third_party/openssl" name="platform/external/chromium_org/third_party/openssl" />
   <project path="external/chromium_org/third_party/opus/src" name="platform/external/chromium_org/third_party/opus/src" />
   <project path="external/chromium_org/third_party/ots" name="platform/external/chromium_org/third_party/ots" />
   <project path="external/chromium_org/third_party/sfntly/cpp/src" name="platform/external/chromium_org/third_party/sfntly/cpp/src" />
@@ -203,14 +202,12 @@
   <project path="external/libutf" name="platform/external/libutf" groups="pdk-cw-fs" />
   <project path="external/libvorbis" name="platform/external/libvorbis" groups="pdk-cw-fs" />
   <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
-  <project path="external/libvterm" name="platform/external/libvterm" groups="pdk-cw-fs" />
   <project path="external/libxml2" name="platform/external/libxml2" groups="pdk-cw-fs" />
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" />
   <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" groups="pdk-cw-fs" />
   <project path="external/littlemock" name="platform/external/littlemock" groups="pdk-cw-fs" />
   <project path="external/lldb" name="platform/external/lldb" groups="pdk-cw-fs" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" />
-  <project path="external/lohit-fonts" name="platform/external/lohit-fonts" />
   <project path="external/ltrace" name="platform/external/ltrace" groups="pdk-cw-fs" />
   <project path="external/lzma" name="platform/external/lzma" groups="pdk" />
   <project path="external/markdown" name="platform/external/markdown" groups="pdk-cw-fs" />
@@ -236,8 +233,6 @@
   <project path="external/objenesis" name="platform/external/objenesis" groups="pdk-cw-fs" />
   <project path="external/okhttp" name="platform/external/okhttp" groups="pdk-cw-fs" />
   <project path="external/opencv" name="platform/external/opencv" groups="pdk-cw-fs" />
-  <project path="external/openfst" name="platform/external/openfst" groups="pdk-cw-fs"/>
-  <project path="external/openssh" name="platform/external/openssh" groups="pdk-cw-fs"/>
   <project path="external/openssl" name="platform/external/openssl" groups="pdk" />
   <project path="external/oprofile" name="platform/external/oprofile" groups="pdk-cw-fs" />
   <project path="external/owasp/sanitizer" name="platform/external/owasp/sanitizer" />
@@ -320,6 +315,7 @@
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" groups="pdk-cw-fs" />
+  <project path="frameworks/testing" name="platform/frameworks/testing" groups="pdk-cw-fs" />
   <project path="frameworks/volley" name="platform/frameworks/volley" groups="pdk-cw-fs" />
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs" />
@@ -388,7 +384,6 @@
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
-  <project path="packages/apps/FMRadio" name="platform/packages/apps/FMRadio" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
   <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
@@ -416,7 +411,6 @@
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
-  <project path="packages/apps/Terminal" name="platform/packages/apps/Terminal" />
   <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" />
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
@@ -521,29 +515,26 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
-
-<remote name="sony" fetch="git://github.com/sonyxperiadev/" />
-<project path="device/sony/amami" name="device-sony-amami" groups="device" remote="sony" revision="master" />
-<project path="device/sony/aries" name="device-sony-aries" groups="device" remote="sony" revision="master" />
-<project path="device/sony/castor" name="device-sony-castor" groups="device" remote="sony" revision="master" />
-<project path="device/sony/eagle" name="device-sony-eagle" groups="device" remote="sony" revision="master" />
-<project path="device/sony/flamingo" name="device-sony-flamingo" groups="device" remote="sony" revision="master" />
-<project path="device/sony/honami" name="device-sony-honami" groups="device" remote="sony" revision="master" />
-<project path="device/sony/leo" name="device-sony-leo" groups="device" remote="sony" revision="master" />
-<project path="device/sony/rhine" name="device-sony-rhine" groups="device" remote="sony" revision="master" />
-<project path="device/sony/scorpion" name="device-sony-scorpion" groups="device" remote="sony" revision="master" />
-<project path="device/sony/seagull" name="device-sony-seagull" groups="device" remote="sony" revision="master" />
-<project path="device/sony/shinano" name="device-sony-shinano" groups="device" remote="sony" revision="master" />
-<project path="device/sony/sirius" name="device-sony-sirius" groups="device" remote="sony" revision="master" />
-<project path="device/sony/tianchi" name="device-sony-tianchi" groups="device" remote="sony" revision="master" />
-<project path="device/sony/togari" name="device-sony-togari" groups="device" remote="sony" revision="master" />
-<project path="device/sony/yukon" name="device-sony-yukon" groups="device" remote="sony" revision="master" />
-<!--
-<project path="kernel/sony/msm" name="kernel" groups="device" remote="sony" revision="aosp/AU_LINUX_ANDROID_LA.BF.2.1_RB1.05.00.00.173.012" />
--->
+  
+  <remote name="sony" fetch="git://github.com/sonyxperiadev/" />
+<project path="device/sony/amami" name="device-sony-amami" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/aries" name="device-sony-aries" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/castor" name="device-sony-castor" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/eagle" name="device-sony-eagle" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/flamingo" name="device-sony-flamingo" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/honami" name="device-sony-honami" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/leo" name="device-sony-leo" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/rhine" name="device-sony-rhine" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/scorpion" name="device-sony-scorpion" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/seagull" name="device-sony-seagull" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/shinano" name="device-sony-shinano" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/sirius" name="device-sony-sirius" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/tianchi" name="device-sony-tianchi" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/togari" name="device-sony-togari" groups="device" remote="sony" revision="l-mr0" />
+<project path="device/sony/yukon" name="device-sony-yukon" groups="device" remote="sony" revision="l-mr0" />
+<!-- <project path="kernel/sony/msm" name="kernel" groups="device" remote="sony" revision="aosp/LNX.LA.3.5.2.2-03010-8x74.0" /> -->
 <project path="vendor/sony/system/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
 <project path="vendor/sony/system/mkqcdtbootimg" name="mkqcdtbootimg" groups="device" remote="sony" revision="master" />
 <project path="vendor/sony/system/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
 
-  
 </manifest>
